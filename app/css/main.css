@@ -1,6 +1,355 @@
-h1 {
-	color: green;
+html {
+	height: 100%;
 }
-p {
-	color: blue;
+body {
+	height: 100%;
+	background: url(../img/ppattern.png) repeat;
+	font: normal 1em 'fira_sanslight';
+	color: #4a545d;
 }
+
+/* футер к низу */
+.wrapper {
+	position: relative;
+	min-height: 100%;
+	min-width: 970px; 
+	height: auto;
+}
+.wrapper:after {
+	content: "";
+	height: 80px;
+	display: block;
+}
+.page-footer {
+	min-width: 970px;
+	height: 80px;
+	margin-top: -80px;
+}
+/* футер к низу - конец */
+
+/* Шапка */
+.container-big {
+	max-height: 1200px;
+	min-width: 960px;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+.page-header {
+	height: 119px;
+	background: #eff3f7 url(../img/line.png) bottom center no-repeat;
+	position: relative;
+	margin-bottom: 39px;
+}
+.page-header .header-logo-link {
+	position: absolute;
+	top: 39px;
+	left: 80px;
+	
+}
+.page-header .header-logo-text {
+	position: absolute;
+	left: -9999px;
+}
+.page-header .socials {
+	position: absolute;
+	top: 36px;
+	right: 80px;
+}
+/* Шапка - конец */
+
+/* Cоц.блок */
+.socials {
+	margin: 0;
+	padding: 0;
+	min-width: 260px;
+}
+.socials .socials-item {
+	list-style: none;
+	display: inline-block; 
+	height: 47px;
+	width: 47px;
+	margin-left: 19px;
+	/* Отступ у таких элементов всегда слева */
+}
+.socials .socials-item:first-child {
+	margin-left: 0;
+	/* У первого элемента обнуляем отступ*/
+}
+.socials .socials-link {
+	display: block;
+	height: 100%;
+	width: 100%;
+	text-indent: -9999px;
+	background: url(../img/socials.png) no-repeat;
+}
+.socials .socials-link.vk {background-position: -412px -10px;}
+.socials .socials-link.tw {background-position: -278px -10px;}
+.socials .socials-link.fb {background-position: -10px -10px;}
+.socials .socials-link.gt {background-position: -144px -10px;}
+.socials .socials-link.vk:hover {background-position: -479px -10px;}
+.socials .socials-link.tw:hover {background-position: -345px -10px;}
+.socials .socials-link.fb:hover {background-position: -77px -10px;}
+.socials .socials-link.gt:hover {background-position: -211px -10px;}
+
+/* Сайдбар */
+.sidebar {
+	width: 250px;
+	float: left;
+}
+
+/* Навигация */
+.navigation {
+	overflow: hidden;
+	background: #eff3f7;
+	border-radius: 4px;
+	margin-bottom: 26px;
+}
+.navigation .navigation-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.navigation .navigation-item {
+	border-top: 2px solid #3ba8c0;
+	margin: 0 11px;
+}
+.navigation .navigation-item:first-child {
+	border-top: none;
+}
+/* Навигация - текущий пункт меню*/
+.navigation .navigation-item.current {
+	background: #3ba8c0;
+	margin: 0;
+	border-bottom: none;
+	padding-left: 11px;
+	margin-bottom: -2px; /* Хак: для полоски */
+}
+.navigation .navigation-item.current .navigation-link {
+	color: #f9fafb;
+	font-size: 22px;
+}
+/* Навигация - текущий пункт меню - конец*/
+
+.navigation .navigation-link {
+	font-family: 'fira_sansbook';
+	display: block; /* ссылка заполняет весь блок */
+	font-size: 20px;
+	text-decoration: none;
+	color: #959aa8;
+	margin-left: 16px;
+	padding: 20px 0px;
+}
+.navigation .navigation-link {
+	color: #3ba8c0;
+}
+/* Навигация - конец */
+
+/* Адрес */
+.contacts {
+	overflow: hidden;
+	border-radius: 4px;
+	background: #3ba8c0;
+}
+.contacts .contacts-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.contacts .contacts-header {
+	font-size: 21px;
+	color: #fbfcfd;
+	margin-left: 21px;
+	padding: 14px 0;
+}
+.contacts .contacts-link {
+	text-decoration: none;
+	font-size: 17px;
+	color: #fbfcfd;
+	padding: 11px 0;
+	display: block;
+	margin-left: 
+}
+.contacts .contacts-item.contacts-item-mai {
+	background: #41b9d4;	
+}
+.contacts .contacts-item.contacts-item-phone {
+	background: #48cbe8;
+}
+.contacts .contacts-item.contacts-item-skype {
+	background: #51daf8;
+}
+/* Адрес - конец */
+
+/* Дима дописал */
+
+.variable-content{
+	float: right;
+	width: 650px;
+}
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+    *zoom: 1;
+}
+
+/* Общие стили для всех секций */
+.aboutbox {
+	
+	background: #eff3f7;
+	border-radius: 4px;
+	margin-bottom: 26px;
+}
+.aboutbox .aboutbox-header {
+	font-family: 'fira_sansbook';
+	font-size: 27px;
+	font-weight: normal;
+	color: #3ba8c0;
+	border-bottom: 2px #3ba8c0 solid;
+	margin: 0 0 23px 0;
+	padding: 13px 23px;
+	display: inline-block;
+}
+.aboutbox-body {
+	padding-bottom: 40px;
+}
+/* Общие стили для всех секций - конец */
+
+/* Лицо */
+.image-wrap {
+	float: left;
+	margin-left: 55px;
+	margin-top: 18px;
+}
+.avatar-box {
+	width: 142px;
+	height: 142px;
+	border-radius: 50% 50%;
+	overflow: hidden; /* Фото в окне */
+	border: 5px solid #3ba8c0;
+}
+.avatar {
+	width: 100%
+}
+/* Лицо - конец */
+
+/* Список анкетных данных */
+.aboutbox .worksheet-wrap {
+	float: right;
+	width: 400px;
+}
+.worksheet-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.worksheet-what {
+	font-family: 'fira_sansmedium';
+	font-size: 17px;
+	float: left;
+	max-width: 200px;
+}
+.worksheet-info {
+	overflow: hidden;
+	font-family: 'fira_sansbook';
+	margin-left: 25px;
+	font-size: 15px;
+	max-width: 218px;
+} 
+.container:after, .clearfix:after {
+ clear: both;
+}
+
+.worksheet-wrap .worksheet-item.clearfix {
+	
+}
+
+/* Ключевые навыки */
+.worksheet-info.skills .skills-list{
+	width: 224px;
+	padding: 0;
+	list-style: none;
+}
+
+
+/* Список анкетных данных - конец */ 
+
+/* Футер */
+.page-footer {
+	background: #eff3f7 url(../img/line.png) top center no-repeat;
+	font-family: 'fira_sanslight';
+	color: #4a545d;
+}
+.page-footer .container {
+	padding-top: 23px;
+	position: relative;
+}
+.page-footer .copyright {
+	margin: 0 180px;
+	padding-top: 7px;
+	text-align: center;
+	font-size: 13px;
+}
+/* Логин */
+.page-footer .lock {
+	position: absolute;
+	top: 26px;
+	left: 20px;
+}
+.lock .lock-inner {
+	display: block;
+	height: 40px;
+	font-family: 'fira_sansbook';
+	font-size: 16px;
+	line-height: 2.2;
+	color: #4a545d;
+	text-decoration: none;
+	background: url(../img/lock-close.png) no-repeat;
+	padding-left: 24px; 
+}
+.lock .lock-inner:hover {
+	text-decoration: underline;
+	background: url(../img/lock-open.png) no-repeat;
+}
+
+/* общие классы*/
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+.text-center {
+	text-align: center;
+}
+.pull-left {
+	float: left;
+}
+.pull-right {
+	float: right;
+}
+
+
+
+
+
+
