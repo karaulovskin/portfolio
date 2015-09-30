@@ -29,7 +29,7 @@ body {
 
 /* Шапка */
 .container-big {
-	max-height: 1200px;
+	max-width: 1200px;
 	min-width: 960px;
 	height: 100%;
 	margin: 0 auto;
@@ -44,7 +44,7 @@ body {
 .page-header .header-logo-link {
 	position: absolute;
 	top: 39px;
-	left: 80px;
+	left: 0px;
 	
 }
 .page-header .header-logo-text {
@@ -54,9 +54,9 @@ body {
 .page-header .socials {
 	position: absolute;
 	top: 36px;
-	right: 80px;
+	right: 0px;
 }
-/* Шапка - конец */
+
 
 /* Cоц.блок */
 .socials {
@@ -91,6 +91,7 @@ body {
 .socials .socials-link.tw:hover {background-position: -345px -10px;}
 .socials .socials-link.fb:hover {background-position: -77px -10px;}
 .socials .socials-link.gt:hover {background-position: -211px -10px;}
+/* Шапка - конец */
 
 /* Сайдбар */
 .sidebar {
@@ -117,6 +118,7 @@ body {
 .navigation .navigation-item:first-child {
 	border-top: none;
 }
+
 /* Навигация - текущий пункт меню*/
 .navigation .navigation-item.current {
 	background: #3ba8c0;
@@ -151,33 +153,51 @@ body {
 	border-radius: 4px;
 	background: #3ba8c0;
 }
-.contacts .contacts-list {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
 .contacts .contacts-header {
+	font-style: normal;
 	font-size: 21px;
 	color: #fbfcfd;
 	margin-left: 21px;
-	padding: 14px 0;
+	padding: 4px 0px;
+}
+
+.contacts .contacts-item {
+	padding: 7px 0;
+	
+}
+.contacts .contacts-list {
+	list-style: none;
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
 }
 .contacts .contacts-link {
-	text-decoration: none;
 	font-size: 17px;
 	color: #fbfcfd;
-	padding: 11px 0;
-	display: block;
-	margin-left: 
+	margin-left: 83px;
+	font-style: normal;
+	text-decoration: none;
+
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+     white-space: nowrap;
+    display: block;
 }
-.contacts .contacts-item.contacts-item-mai {
-	background: #41b9d4;	
+.contacts .contacts-link:hover {
+	text-decoration: underline;
+}
+.contacts .contacts-item.contacts-item-mail {
+	background: #41b9d4 url('../img/mail.png') no-repeat;
+	background-position: 42px 12px;	
 }
 .contacts .contacts-item.contacts-item-phone {
-	background: #48cbe8;
+	background: #48cbe8 url('../img/telefon.png') no-repeat;
+	background-position: 42px 10px;
 }
 .contacts .contacts-item.contacts-item-skype {
-	background: #51daf8;
+	background: #51daf8 url('../img/skype.png') no-repeat;
+	background-position: 42px 10px;
 }
 /* Адрес - конец */
 
@@ -213,6 +233,7 @@ body {
 .clearfix {
     *zoom: 1;
 }
+
 
 /* Общие стили для всех секций */
 .aboutbox {
@@ -268,32 +289,92 @@ body {
 	font-family: 'fira_sansmedium';
 	font-size: 17px;
 	float: left;
-	max-width: 200px;
 }
 .worksheet-info {
 	overflow: hidden;
 	font-family: 'fira_sansbook';
-	margin-left: 25px;
 	font-size: 15px;
 	max-width: 218px;
+	margin-left: 25px;
+	float: left;
 } 
-.container:after, .clearfix:after {
- clear: both;
+.worksheet-info.name {
+	max-width: 260px;
 }
-
 .worksheet-wrap .worksheet-item.clearfix {
 	
 }
 
 /* Ключевые навыки */
+/*.worksheet-info .skills-list{
+	width: 224px;
+	padding: 0;
+	list-style: none;
+}*/
+.skills-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	max-width: 210px;
+}
 .worksheet-info.skills .skills-list{
 	width: 224px;
 	padding: 0;
 	list-style: none;
 }
-
+.skills-list .skill-item {
+	display: inline-block;
+	font-family: 'ProximaNovaCondensedSemibold';
+	border-radius: 4px;
+	padding: 0 7px;
+	margin-right: 6px;
+	color: white;
+	display: inline-block;
+	line-height: 1.2;
+	min-width: 40px;
+	text-align: center;
+	background: #3ba8c0; /* Old browsers */
+	background: -moz-linear-gradient(top,  #3ba8c0 1%, #3ba8c0 50%, #2e8ca2 51%, #2e8ca2 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#3ba8c0), color-stop(50%,#3ba8c0), color-stop(51%,#2e8ca2), color-stop(100%,#2e8ca2)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #3ba8c0 1%,#3ba8c0 50%,#2e8ca2 51%,#2e8ca2 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #3ba8c0 1%,#3ba8c0 50%,#2e8ca2 51%,#2e8ca2 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #3ba8c0 1%,#3ba8c0 50%,#2e8ca2 51%,#2e8ca2 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #3ba8c0 1%,#3ba8c0 50%,#2e8ca2 51%,#2e8ca2 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3ba8c0', endColorstr='#2e8ca2',GradientType=0 ); /* IE6-9 */
+}
 
 /* Список анкетных данных - конец */ 
+
+.aboutbox .aboutbox-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.aboutbox .aboutbox-item {
+	margin-left: 58px;
+	background-position: 0px center;
+}
+.aboutbox .where {
+	margin-left: 65px;
+	font-size: 17px;
+}
+
+.aboutbox .period {
+	margin-left: 65px;
+	font-size: 15px;
+	font-family: 'fira_sanslight';
+}
+
+.aboutbox-item.icon-work {
+	background: url(../img/work.png) 9px center no-repeat; 
+}
+.aboutbox-item.icon-college {
+	background: url(../img/college.png) 9px center no-repeat; 
+}
+.aboutbox-item.icon-course {
+	background: url(../img/course.png) 17px center no-repeat; 
+}
+
 
 /* Футер */
 .page-footer {
