@@ -129,18 +129,18 @@ body {
 }
 .navigation .navigation-item.current .navigation-link {
 	color: #f9fafb;
-	font-size: 22px;
+	font-size: 23px;
 }
 /* Навигация - текущий пункт меню - конец*/
 
 .navigation .navigation-link {
 	font-family: 'fira_sansbook';
 	display: block; /* ссылка заполняет весь блок */
-	font-size: 20px;
+	font-size: 21px;
 	text-decoration: none;
 	color: #959aa8;
 	margin-left: 16px;
-	padding: 20px 0px;
+	padding: 18px 0px 18px 0px;
 }
 .navigation .navigation-link {
 	color: #3ba8c0;
@@ -157,10 +157,13 @@ body {
 	font-style: normal;
 	font-size: 21px;
 	color: #fbfcfd;
-	padding: 4px 0px;
-	margin: 4px 0px 0px 21px;
+	padding: 6px 0px 1px 0px;
+	/*margin: 4px 0px 0px 21px;*/
 }
-
+.header-inner-text {
+	font-family: "fira_sansbook", sans-serif;
+	margin-left: 21px;
+}
 .contacts .contacts-item {
 	padding: 7px 0px;
 }

@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'ProximaNova-Semibold';
-	src: url(../fonts/Proxima-Nova/ProximaNova-Semibold.otf) format("opentype");	
+	src: url('../fonts/Proxima-Nova/ProximaNova-Semibold.otf') format("opentype");	
 }
 
 
@@ -155,6 +155,7 @@
 .aboutbox .where {
 	margin-left: 65px;
 	font-size: 17px;
+	font-family: 'fira_sansbook';
 }
 
 .aboutbox .period {
@@ -164,13 +165,13 @@
 }
 
 .aboutbox-item.icon-work {
-	background: url(../img/work.png) 0px center no-repeat;	
+	background: url('../img/work.png') 0px center no-repeat;	
 }
 .aboutbox-item.icon-college {
-	background: url(../img/college.png) 0px center no-repeat;
+	background: url('../img/college.png') 0px center no-repeat;
 }
 .aboutbox-item.icon-course {
-	background: url(../img/course.png) 0px center no-repeat;
+	background: url('../img/course.png') 10px center no-repeat;
 }
 
 
