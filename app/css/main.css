@@ -127,10 +127,7 @@ body {
 	padding-left: 11px;
 	margin-bottom: -2px; /* Хак: для полоски */
 }
-.navigation .navigation-item.current .navigation-link {
-	color: #f9fafb;
-	font-size: 23px;
-}
+
 /* Навигация - текущий пункт меню - конец*/
 
 .navigation .navigation-link {
@@ -142,8 +139,11 @@ body {
 	margin-left: 16px;
 	padding: 18px 0px 18px 0px;
 }
-.navigation .navigation-link {
+.navigation .navigation-link:hover {
 	color: #3ba8c0;
+}
+.navigation .navigation-link:active {
+	color: ##f9fafb;
 }
 /* Навигация - конец */
 

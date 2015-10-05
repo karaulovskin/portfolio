@@ -1,0 +1,99 @@
+@font-face {
+	font-family: 'ProximaNova-Semibold';
+	src: url('../fonts/Proxima-Nova/ProximaNova-Semibold.otf') format("opentype");	
+}
+
+/* Дима дописал */
+.variable-content{
+	float: right;
+	width: 650px;
+}
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+    *zoom: 1;
+}
+
+/* Общие стили для всех секций */
+.aboutbox {
+	
+	background: #eff3f7;
+	border-radius: 4px;
+	margin-bottom: 26px;
+}
+.aboutbox .aboutbox-header {
+	font-family: 'fira_sansbook';
+	font-size: 27px;
+	font-weight: normal;
+	color: #3ba8c0;
+	border-bottom: 2px #3ba8c0 solid;
+	margin: 0 0 23px 0;
+	padding: 13px 23px;
+	display: inline-block;
+}
+.portfolio-body {
+	min-height: 770px;
+}
+/* Общие стили для всех секций - конец */
+
+/* Общие стили для проектов */
+.portfolio-list .portfolio-item {
+	display: inline-block;
+	vertical-align: top;
+	height: 240px;
+	width: 183px;
+	margin: 0 0 39px 30px;
+	text-align: center;
+}
+.portfolio-list {
+	margin: 0;
+	padding: 0;
+	font-size: 0px;
+}
+.portfolio-box:nth-child(3n+1) {
+	margin-left: -10px;
+}
+
+.portfolio-box {
+	height: 125px;
+	border: 2px solid #3ba8c0;
+	border-radius: 4px;
+	background: #fff;
+	width: 179px;
+	
+}
+.portfolio-box .foto-work {
+	margin-bottom: 10px;
+}
+.img-work {
+	width: 100%;
+}
+.portfolio-item .way {
+	display: block;
+	font-size: 13px;
+	margin-bottom: 10px;
+}
+.portfolio-item .inf-work {
+	font-size: 15px;
+}
