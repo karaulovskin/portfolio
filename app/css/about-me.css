@@ -7,7 +7,7 @@
 /* Дима дописал */
 .variable-content{
 	float: right;
-	width: 650px;
+	min-width: 650px;
 }
 /**
  * For modern browsers
