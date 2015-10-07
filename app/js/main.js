@@ -1,3 +1,3 @@
-$ (function () {
-	console.log ('файл main.js успешно загружен')
-})
+$(document).ready(function() {
+	console.log('я на главной странице');	
+});
