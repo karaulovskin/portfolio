@@ -127,9 +127,16 @@ body {
 	padding-left: 11px;
 	margin-bottom: -2px; /* Хак: для полоски */
 }
-
+..navigation .navigation-item.current .nav {
+	color: #f9fafb;
+	font-size: 22px;
+}
 /* Навигация - текущий пункт меню - конец*/
 
+.navigation .navigation-item.current .navigation-link {
+  color: #f9fafb;
+  font-size: 22px;
+}
 .navigation .navigation-link {
 	font-family: 'fira_sansbook';
 	display: block; /* ссылка заполняет весь блок */
@@ -142,9 +149,7 @@ body {
 .navigation .navigation-link:hover {
 	color: #3ba8c0;
 }
-.navigation .navigation-link:active {
-	color: ##f9fafb;
-}
+
 /* Навигация - конец */
 
 /* Адрес */

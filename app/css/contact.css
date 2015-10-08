@@ -37,10 +37,11 @@
 }
 
 /* Общие стили для всех секций */
-.aboutbox {
+.formbox {
 	height: 840px; 
 	background: #eff3f7;
 	border-radius: 4px;
+	overflow: hidden;
 	margin-bottom: 26px;
 }
 .contact-header {
