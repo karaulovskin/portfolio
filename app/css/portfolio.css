@@ -75,15 +75,57 @@
 .work-box:nth-child(3n+1) {
 	margin-left: -10px;
 }
-
+ /* BEGIN Hover effect over project */
+.work-box:hover .more-info  {
+	display: block;
+    cursor: pointer;
+    /* Doesn't work for IE8 */
+	/*-ms-transform: translate(45px,45px); 
+   	-webkit-transform: translate(45px,45px); 
+    transform: translate(45px,45px);*/
+}
+.work-box:hover  .img-preview {
+	opacity: 0.2;
+}/* END Hover effect over project */
 .work-box {
 	height: 125px;
 	border: 2px solid #3ba8c0;
 	border-radius: 4px;
 	width: 179px;
-	
 }
-.new-box {
+.project-info-link {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background: #016ca4;
+	margin-bottom: 10px;
+}
+.more-info {
+	font-size: 12px;
+	display: none;
+	position: absolute;
+	width: 62px;
+	color: white;
+	margin-left: 55px;
+	margin-top: 53px;
+	background: #016ca4;
+	border: 2px solid white;
+	border-radius: 4px;
+}
+.img-preview {
+	width: 100%;
+}
+.project-link {
+	font: italic 13px 'fira_sanslight';
+	color: #3ba8c0;
+	margin-bottom: 8px;
+}
+.inf-work {
+	font: normal 15px 'fira_sanslight';
+	color: #4a545d;
+}
+/*.new-box {
 	border: 2px dashed #3ba8c0;
 	border-radius: 4px;
 	display: inline-block;
@@ -108,5 +150,5 @@
 }
 .progect .inf-work {
 	font-size: 15px;
-}
-.new-work {}
+}*/
+
