@@ -3,21 +3,13 @@
 	src: url('../fonts/Proxima-Nova/ProximaNova-Semibold.otf') format("opentype");	
 }
 
-/* Дима дописал */
+
 .variable-content{
 	float: right;
 	min-width: 650px;
 	border-radius: 4px;
 }
-/**
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    contenteditable attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that are clearfixed.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
+
 .clearfix:before,
 .clearfix:after {
     content: " "; /* 1 */
@@ -49,6 +41,7 @@
 	border-bottom: 17px solid #67dffa;
 	background: #48cbe8;
 	font-size: 27px;
+	font-family: "fira_sansbook", sans-serif;
 	text-align: center;
 	color: white;
 	margin: 0;
@@ -129,3 +122,4 @@
 	background-color: #849ab5;
 	border: 1px solid #849ab5;
 }
+

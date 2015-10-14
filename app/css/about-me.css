@@ -4,20 +4,11 @@
 }
 
 
-/* Дима дописал */
 .variable-content{
 	float: right;
 	min-width: 650px;
 }
-/**
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    contenteditable attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that are clearfixed.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
+
 .clearfix:before,
 .clearfix:after {
     content: " "; /* 1 */
@@ -146,29 +137,34 @@
 .aboutbox .aboutbox-list {
 	list-style: none;
 	padding: 0;
-	margin: 0;
+	margin-top: -6px;
+	margin-left: -3px;
 }
 .aboutbox .aboutbox-item {
-	margin-left: 58px;
+	margin-left: 59px;
 	background-position: 0px center;
 }
 .aboutbox .where {
-	margin-left: 65px;
+	margin-left: 66px;
+	margin-top: -1px;
 	font-size: 17px;
 	font-family: 'fira_sansbook';
 }
 
 .aboutbox .period {
-	margin-left: 65px;
+	margin-left: 67px;
+	margin-top: -6px;
 	font-size: 15px;
 	font-family: 'fira_sanslight';
 }
 
 .aboutbox-item.icon-work {
-	background: url('../img/work.png') 0px center no-repeat;	
+	background: url('../img/work.png') 0px center no-repeat;
+	margin-bottom: 14px;	
 }
 .aboutbox-item.icon-college {
 	background: url('../img/college.png') 0px center no-repeat;
+	margin-bottom: 19px;
 }
 .aboutbox-item.icon-course {
 	background: url('../img/course.png') 10px center no-repeat;
