@@ -224,6 +224,14 @@
     border-radius: 4px;
     margin-bottom: 5px;
 }
+
+::-webkit-input-placeholder {
+	color: #54cee9; /* Chrome, Safari */
+}
+:-moz-placeholder {
+	color: #54cee9; /* Firefox */
+}
+
 .textarea {
 	color: #48cbe8;
     font-family: 'fira_sanslight';
@@ -233,6 +241,7 @@
     border-radius: 4px;
     width: 308px;
 }
+
 .btn {
 	margin-left: 90px;
     width: 140px;

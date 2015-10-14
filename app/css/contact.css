@@ -60,6 +60,14 @@
 	width: 178px; 
 	float: left;
 }
+
+::-webkit-input-placeholder {
+	color: #54cee9; /* Chrome, Safari */
+}
+:-moz-placeholder {
+	color: #54cee9; /* Firefox */
+}
+
 .field-text {
 	font-size: 19px;
 	color: #959aa8;
@@ -100,6 +108,7 @@
 	border: 1px solid #48cbe8;
 	border-radius: 4px;
 	padding-left: 12px;
+	background: white;
 }
 .code-capture {
 	float: right;
