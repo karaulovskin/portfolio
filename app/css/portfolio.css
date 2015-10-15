@@ -67,11 +67,11 @@
 }
 
  /* Эффект наведения на проект */
-.project-info-link:hover .more-info  {
+.work-box:hover .more-info  {
 	display: block;
     cursor: pointer;
 }
-.project-info-link:hover  .img-preview {
+.work-box:hover  .img-preview {
 	opacity: 0.2;
 }/* Эффект наведения на проект - конец */
 
