@@ -149,6 +149,7 @@
 	margin-top: -1px;
 	font-size: 17px;
 	font-family: 'fira_sansbook';
+	max-width: 520px;
 }
 
 .aboutbox .period {
@@ -156,6 +157,7 @@
 	margin-top: -6px;
 	font-size: 15px;
 	font-family: 'fira_sanslight';
+	max-width: 520px;
 }
 
 .aboutbox-item.icon-work {
