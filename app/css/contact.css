@@ -30,34 +30,41 @@
 
 /* Общие стили для всех секций */
 .formbox {
-	height: 840px; 
+	/*height: 840px; */
 	background: #eff3f7;
 	border-radius: 4px;
 	overflow: hidden;
-	margin-bottom: 26px;
+	margin-bottom: 40px;
+}
+.header-wrap {
+	background: #48cbe8;
+	border-bottom: 17px solid #67dffa;
+	text-align: center;
+	padding: 42px 20px 38px;
+	margin-bottom: 40px;
+
 }
 .contact-header {
-	height: 121px;
-	border-bottom: 17px solid #67dffa;
-	background: #48cbe8;
+	margin: 0;
+	font-weight: normal;
 	font-size: 27px;
 	font-family: "fira_sansbook", sans-serif;
-	text-align: center;
 	color: white;
-	margin: 0;
-	padding: 0;
-	line-height: 121px;
-	margin-bottom: 46px;
+	max-width: 650px;
 }
 .area-top {
-	margin-bottom: 22px;
+	margin-bottom: 10px;
+}
+.field-text {
+	font-size: 19px;
+	color: #959aa8;
 }
 .contact-form {
 	margin: auto;
 	width: 400px;
 }
 .area-name {
-	width: 178px; 
+	width: 177px; 
 	float: left;
 }
 
@@ -68,41 +75,46 @@
 	color: #54cee9; /* Firefox */
 }
 
-.field-text {
+.area-messege.field-text {
 	font-size: 19px;
 	color: #959aa8;
 }
 .area-address {
-	width: 178px;
+	width: 190px;
 	float: right;
 }
 .contact-form .text {
-	height: 40px;
-	width: 100%;
+	height: 37px;
+	width: 182px;
 	color: #48cbe8;
 	font-size: 13px;
-	padding-left: 12px;
+	padding-left: 7px;
 	border: 1px solid #48cbe8;
 	border-radius: 4px;
 }
 .area-message {
 	width: 400px;
-	margin-bottom: 22px;
+	margin-bottom: 4px;
 }
 .area-messege .text {
-	padding-top: 10px;
-	height: 174px;
+	padding-top: 7px;
+	height: 170px;
+	width: 390px;
 }
 .area-capture {
 	width: 100%;
 	margin-bottom: 22px;
 }
+.field-text-capture {
+	font-size: 17px;
+	color: #959aa8;
+}
 .capture {
 	display: block;
 	float: left;
 	margin: 0;
-	height: 80px;
-	width: 190px;
+	height: 75px;
+	width: 176px;
 	color: #48cbe8;
 	font-size: 13px;
 	border: 1px solid #48cbe8;
@@ -113,6 +125,10 @@
 .code-capture {
 	float: right;
 	width: 175px;
+	margin-top: 8px;
+}
+.area-bottom {
+	margin-bottom: 198px;
 }
 .button {
 	font-family: 'fira_sansbook';
@@ -123,11 +139,13 @@
 }
 .button-send {
 	float: left;
+	padding: 0 20px;
 	background-color: #48cbe8;
 	border: 1px solid #48cbe8;
 }
 .button-clear {
 	float: right;
+	padding: 0 20px;
 	background-color: #849ab5;
 	border: 1px solid #849ab5;
 }

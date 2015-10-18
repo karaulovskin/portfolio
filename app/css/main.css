@@ -139,6 +139,7 @@ body {
 }
 .navigation .navigation-link {
 	font-family: 'fira_sansbook';
+	font-weight: normal;
 	display: block; /* ссылка заполняет весь блок */
 	font-size: 21px;
 	text-decoration: none;
