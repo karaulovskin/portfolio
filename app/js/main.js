@@ -1,3 +1,4 @@
-$(document).ready(function() {
-	console.log('я на главной странице');	
-});
+// Для старых браузеров подключаем jquery.placeholder
+if (!Modernizr.input.placeholder){
+  $('input, textarea').placeholder();
+} 
