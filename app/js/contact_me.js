@@ -1,56 +1,96 @@
-// Модуль связаться со мной 
-var contactMe = (function (){
+var contactMe = (function () {
 
-	var init = function(){
-				console.log('Инициализация модуля contactMe');
-				_setUpListners();
-			},
-			_setUpListners = function (){
-				$('#contact-me').on('submit', _submitForm); // отправка формы "связаться со мной"
-			},
-			_submitForm = function (ev) {
-	      console.log('Работаем с формой связи');
+	// Инициализирует наш модуль
+	var init = function () {
+		_setUpListners();
+	};
 
-	      ev.preventDefault();
+	// Прослушивает события
+	var _setUpListners = function () {
+		$('#contact-me').on('submit', _submitForm);
+	};
 
-	      var form = $(this),          
-	          url = '/send_mail.php',
-	          defObject = _ajaxForm(form, url);
+	var _submitForm = function(ev){
+		console.log('Отправка формы'),
+		ev.preventDefault();
 
-	      if (defObject) {
-	        defObject.done(function(ans) {
-	          var mes = ans.mes,
-	              status = ans.status;
+		var form = $(this),
+			url = 'contactme.php',
+			defObj = _ajaxForm(form, url);
+			//  ... делать с ответом с сервера defObj
 
-	          if ( status === 'OK'){
-	            form.trigger('reset');
-	            form.find('.success-mes').text(mes).show();           
-	          } else{
-	            form.find('.error-mes').text(mes).show();
-	          }
-	        });
-	      }
-	    },
-	    _ajaxForm = function (form, url) {
-      
-	      if (!validation.validateForm(form)) return false;  // Возвращает false, если не проходит валидацию 
-	      var data = form.serialize(); // собираем данные из формы в объект data
+	};
 
-	      return $.ajax({ // Возвращает Deferred Object
-	        type: 'POST',
-	        url: url,
-	        dataType : 'JSON',
-	        data: data
-	      }).fail( function(ans) {
-	        console.log('Проблемы в PHP');
-	        form.find('.error-mes').text('На сервере произошла ошибка').show();
-	      });
-	    };   
+	var _ajaxForm = function (form, url) {
+		console.log('ajax запрос с проверкой ');
+		if (!validation.validateForm(form)) return false;
+		// если false то код ниже не произойдет никогда
+
+	};
 
 	return {
 		init: init
 	};
-
 })();
 
 contactMe.init();
+
+
+
+
+// // Модуль связаться со мной 
+// var contactMe = (function (){
+
+// 	var init = function(){
+// 				console.log('Инициализация модуля contactMe');
+// 				_setUpListners();
+// 			},
+// 			_setUpListners = function (){
+// 				$('#contact-me').on('submit', _submitForm); // отправка формы "связаться со мной"
+// 			},
+// 			_submitForm = function (ev) {
+// 	      console.log('Работаем с формой связи');
+
+// 	      ev.preventDefault();
+
+// 	      var form = $(this),          
+// 	          url = '/send_mail.php',
+// 	          defObject = _ajaxForm(form, url);
+
+// 	      if (defObject) {
+// 	        defObject.done(function(ans) {
+// 	          var mes = ans.mes,
+// 	              status = ans.status;
+
+// 	          if ( status === 'OK'){
+// 	            form.trigger('reset');
+// 	            form.find('.success-mes').text(mes).show();           
+// 	          } else{
+// 	            form.find('.error-mes').text(mes).show();
+// 	          }
+// 	        });
+// 	      }
+// 	    },
+// 	    _ajaxForm = function (form, url) {
+      
+// 	      if (!validation.validateForm(form)) return false;  // Возвращает false, если не проходит валидацию 
+// 	      var data = form.serialize(); // собираем данные из формы в объект data
+
+// 	      return $.ajax({ // Возвращает Deferred Object
+// 	        type: 'POST',
+// 	        url: url,
+// 	        dataType : 'JSON',
+// 	        data: data
+// 	      }).fail( function(ans) {
+// 	        console.log('Проблемы в PHP');
+// 	        form.find('.error-mes').text('На сервере произошла ошибка').show();
+// 	      });
+// 	    };   
+
+// 	return {
+// 		init: init
+// 	};
+
+// })();
+
+// contactMe.init();

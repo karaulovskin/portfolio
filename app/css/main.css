@@ -7,6 +7,10 @@ body {
 	font: normal 1em 'fira_sanslight';
 	color: #4a545d;
 }
+/* убираем обводку */
+button,input,textarea { 
+outline: none;
+}
 
 /* футер к низу */
 .wrapper {

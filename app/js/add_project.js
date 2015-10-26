@@ -17,15 +17,16 @@ var myModule = (function () {
 
 			var divPopup = $('#new-progect-popup'),
 				form = divPopup.find('.form');
-
+				
 			divPopup.bPopup({
 				speed: 650,
 				transition: 'slideDown',
 				onClose: function () {
 					form.find('.server-mes').text('').hide(); // Очистить поле с названием проекта при закрытие!
+					form.trigger('reset');
 				}
 			});
-		};	
+	};	
 	
 	// Добавление проекта
 	var _addProject = function (e) {
@@ -35,23 +36,27 @@ var myModule = (function () {
 			// объявляем переменные	
 			var form = $(this),
 				url = 'add_project.php',
-				myServerGiveMeAnswer = _ajaxForm(form, url);		
-		
-			myServerGiveMeAnswer.done(function(ans) {
+				defObj = _ajaxForm(form, url);		
+			
+			// проверяем, а был ли запрос на сервер?
+			if(defObj){
+				defObj.done(function(ans) {
 				
-				var successBox = form.find('.success-mes'),
-					errorBox = form.find('.error-mes');
+					var successBox = form.find('.success-mes'),
+						errorBox = form.find('.error-mes');
 
-				if(ans.status === 'OK'){
-					errorBox.hide();
-					successBox.text(ans.text).show();
-				}else{
-					successBox.hide();
-					errorBox.text(ans.text).show();
-				}
+					if(ans.status === 'OK'){
+						errorBox.hide();
+						successBox.text(ans.text).show();
+					}else{
+						successBox.hide();
+						errorBox.text(ans.text).show();
+					}
 
-			})
-		};
+				});
+			}
+
+	};
 
 	// Универсальная функция
 	// Для её работы используется
@@ -62,7 +67,7 @@ var myModule = (function () {
 	// 3. делает запрос на сервер и возвращает ответ с сервера
 	var _ajaxForm = function (form, url) {
 
-			// if(!valid) return false;
+			if (!validation.validateForm(form)) return false;
 
 			data = form.serialize();
 
