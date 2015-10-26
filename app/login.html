@@ -13,6 +13,7 @@
 		<link rel="icon" href="img/favicon.png" type="image/png">
 		<!-- vendor CSS -->
 		<link rel="stylesheet" href="bower/normalize-css/normalize.css">
+		<link rel="stylesheet" href="bower/qtip2/jquery.qtip.css">
 		<!-- fonts CSS -->
 		<link rel="stylesheet" href="fonts/fira/fira.css">
 		<!-- CSS -->
@@ -35,15 +36,15 @@
 				<form>
 					<div class="log-form">
 						<div class="log-name">
-							<span class="log-text">Логин</span>
-							<input class="text" type="text" placeholder="Введите логин">
+							<label for="login" class="label">Логин</login>
+							<input class="input" type="text" name="login" id="name" placeholder="Введите логин" qtip-content="Вы не ввели логин">
 						</div>
 						<div class="log-password">
-							<span class="log-text">Пароль</span>
-							<input class="text" type="text" placeholder="Введите пороль">
+							<label for="password" class="label">Пароль</label>
+							<input class="input" type="password" name="password" id="password" placeholder="Введите пороль" qtip-content="Вы не ввели пароль">
 						</div>
 						<div class="log-buttom">
-							<button class="log-button" type="submit" value="Submit">Войти</button>
+							<button class="btn" type="submit">Войти</button>
 						</div>
 					</div>	
 				</form>

@@ -47,7 +47,7 @@
 	line-height: 92px;
 	border-bottom: 15px solid #67dffa;
 }
-.log-text {
+.label {
 	font-size: 36px;
 	color: #959aa8; 
 }
@@ -55,7 +55,7 @@
 	width: 420px;
 	margin: auto;
 }
-.log-form .text {
+.log-form .input {
 	height: 60px;
 	width: 422px;
 	font-size: 17px;
@@ -63,7 +63,7 @@
 	border: 1px solid #48cbe8;
 	border-radius: 4px;
 }
-.log-button {
+.btn {
 	height: 55px;
 	width: 220px;
 	background-color: #48cbe8;
