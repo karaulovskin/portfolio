@@ -6,18 +6,18 @@ var validation = (function() {
 
 	// Прослушивает события
 	var _setUpListners = function () {
-		$('form').on('keydown','.has-erroe', _removeError);
+		$('form').on('keydown','.has-error', _removeError);
 		$('form').on('reset', _clearForm);
 	};
 
 	var _removeError = function () {
-		$(this).removeClass('has-errpr');
+		$(this).removeClass('has-error');
 	};
 
 	var _clearForm = function (form) {
 		var form = $(this);
 		form.find('.input, .textarea').trigger('hideTooltip');
-		form.find('.has-error').removeClass('.has-error');
+		form.find('.has-error').removeClass('has-error');
 	};
 
 	// Создает тултипы
