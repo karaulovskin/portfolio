@@ -2,6 +2,9 @@
 	font-family: 'ProximaNova-Semibold';
 	src: url('../fonts/Proxima-Nova/ProximaNova-Semibold.otf') format("opentype");	
 }
+.wrapper {
+	margin-bottom: 379px;
+}
 
 .variable-content{
 	float: right;
@@ -28,7 +31,12 @@
 }
 
 .auftorization {
-	margin: 150px auto;
+	position: absolute;
+	margin: auto;
+	top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 	height: 484px;
 	width: 590px;
 	background: #eff3f7;
@@ -36,16 +44,24 @@
 	overflow: hidden;
 	text-align: center;
 }
-.log-header {
-	margin: 0;
-	margin-bottom: 20px;
-	height: 92px;
+
+.header-wrap {
 	background-color: #48cbe8;
+	border-bottom: 15px solid #67dffa;
+	margin-bottom: 15px;
+}
+
+.log-header {
+	margin: 0;	
+	padding-top: 17px;
+	padding-bottom: 13px;
+	font-weight: normal;
 	color: white;
 	font-size: 40px;
 	font-family: 'fira_sansbook';
-	line-height: 92px;
-	border-bottom: 15px solid #67dffa;
+}
+.log-name {
+	margin-bottom: 10px;
 }
 .label {
 	font-size: 36px;
@@ -55,23 +71,40 @@
 	width: 420px;
 	margin: auto;
 }
+
+.log-password {
+	margin-bottom: 33px;
+}
 .log-form .input {
 	height: 60px;
-	width: 422px;
+	width: 400px;
 	font-size: 17px;
+	color: #48cbe8;
 	padding-left: 20px;
 	border: 1px solid #48cbe8;
 	border-radius: 4px;
 }
+
+::-webkit-input-placeholder {
+	color: #54cee9; /* Chrome, Safari */
+}
+:-moz-placeholder {
+	color: #54cee9; /* Firefox */
+}
+
 .btn {
-	height: 55px;
-	width: 220px;
+	height: 53px;
+	width: 226px;
 	background-color: #48cbe8;
 	border: 1px solid #48cbe8;
 	border-radius: 4px;
-	margin-top: 30px; 
 	font-family: 'fira_sansbook';
 	font-size: 36px;
 	color: white;
 	box-shadow: 0px 2px 1px rgba(50, 50, 50, 0.75); 
+}
+
+.has-error{
+	background-color: #fad2d1 !important;
+	border-color: #f97e76 !important;
 }
